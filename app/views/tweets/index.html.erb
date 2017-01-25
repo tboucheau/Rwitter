@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tweets</h1>
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Twitter on rails by me</h1>
+      <p><%= render 'form', tweet: @tweet %></p>
+    </div>
+</div>
 
 <table>
   <thead>
@@ -31,7 +36,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= render 'form', tweet: @tweet %>
