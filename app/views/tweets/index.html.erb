@@ -19,7 +19,7 @@
     <% @tweets.each do |tweet| %>
       <tr>
         <% if tweet.user.pseudo.nil? %>
-            <td><%= link_to "#{tweet.content}", edit_user_path(user) %></td>
+            <td><%= link_to "#{tweet.content}", edit_user_path(tweet.user.id) %></td>
         <% else %>
           <td>@<%= tweet.user.pseudo %></td>
         <% end %>
