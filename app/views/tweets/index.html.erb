@@ -14,9 +14,12 @@
     <% @tweets.each do |tweet| %>
       <tr>
         <td>@<%= tweet.user.pseudo %></td>
-        <td><%= link_to "#{tweet.content}", edit_tweet_path(tweet) %></td>
-        <td><%= time_ago_in_words(tweet.created_at) %>
-        
+        <% if current_user.id == tweet.user_id %>
+          <td><%= link_to "#{tweet.content}", edit_tweet_path(tweet) %></td>
+        <% else %>
+          <td><%= tweet.content %></td>
+        <% end %>
+        <td><%= time_ago_in_words(tweet.created_at) %>        
         <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
