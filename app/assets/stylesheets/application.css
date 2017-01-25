@@ -22,4 +22,5 @@
 }
 .jumbotron h1, p, new_tweet {
     color: white !important;
+    text-shadow: black !important;
 }
