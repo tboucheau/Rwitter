@@ -13,8 +13,9 @@
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.user.pseudo %></td>
+        <td>@<%= tweet.user.pseudo %></td>
         <td><%= tweet.content %></td>
+	<td><%= time_ago_in_words(tweet.created_at) %>
         <td><%= link_to 'Show', tweet %></td>
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
         <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
