@@ -22,7 +22,7 @@
               @<%= tweet.user.pseudo %>
             <% end %>
             <% if current_user.id == tweet.user_id %>
-              <%= link_to '<span aria-hidden="true">&times;</span>', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
         </div>
         </h4>
