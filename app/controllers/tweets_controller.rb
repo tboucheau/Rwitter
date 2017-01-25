@@ -34,7 +34,7 @@ class TweetsController < ApplicationController
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }
-        tweet_error_json(@tweet.errors)
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,7 +48,7 @@ class TweetsController < ApplicationController
         format.json { render :show, status: :ok, location: @tweet }
       else
         format.html { render :edit }
-        tweet_error_json(@tweet.errors)
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -72,9 +72,5 @@ class TweetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
       params.require(:tweet).permit(:content, :user_id)
-    end
-
-    def tweet_error_json(errors)
-      format.json { render json: errors, status: :unprocessable_entity }
     end
 end
