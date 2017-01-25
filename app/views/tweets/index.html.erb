@@ -13,7 +13,7 @@
   
     <% @tweets.each do |tweet| %>
     <div class="col-sm-4">
-      <div class="card">
+      <div class="card card-inverse">
         <h3 class="card-header bg-primary">
         <div class="inline">
             <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
@@ -37,9 +37,6 @@
           <p class="card-text">
             <%= time_ago_in_words(tweet.created_at) %>
           </p>
-          <% if current_user.id == tweet.user_id %>
-            <%= link_to 'Remove tweet', tweet, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
-          <% end %>
         </div>
       </div>
     </div>
