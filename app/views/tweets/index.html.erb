@@ -29,7 +29,9 @@
         <td><%= tweet.content %></td>
       <% end %>
       </p>
-      <%= link_to 'Remove tweet', tweet, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+      <% if current_user.id == tweet.user_id %>
+        <%= link_to 'Remove tweet', tweet, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+      <% end %>
     </div>
   </div>
 <% end %>
