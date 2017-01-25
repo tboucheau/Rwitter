@@ -14,16 +14,16 @@
     <% @tweets.each do |tweet| %>
     <div class="col-sm-4">
       <div class="card">
-        <h3 class="card-header">
+        <h3 class="card-header bg-primary">
         <div class="inline">
-          <p class="bg-primary">
             <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
               <%= link_to "Add pseudo", edit_user_path(tweet.user.id) %>
             <% else %>
               @<%= tweet.user.pseudo %>
             <% end %>
-          </p>
-          <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <% if current_user.id == tweet.user_id %>
+              <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <% end %>
         </div>
         </h3>
         <div class="card-block">
