@@ -42,37 +42,3 @@
     </div>
     <% end %>
 </div>
-
-
-
-<!--- Rweets on table 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
-            <td><%= link_to "Add pseudo", edit_user_path(tweet.user.id) %></td>
-        <% else %>
-          <td>@<%= tweet.user.pseudo %></td>
-        <% end %>
-        <% if current_user.id == tweet.user_id %>
-          <td><%= link_to "#{tweet.content}", edit_tweet_path(tweet) %></td>
-        <% else %>
-          <td><%= tweet.content %></td>
-        <% end %>
-        <td><%= time_ago_in_words(tweet.created_at) %>        
-        <% if current_user.id == tweet.user_id %>
-          <td><%= link_to 'Remove tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-  -->
-
