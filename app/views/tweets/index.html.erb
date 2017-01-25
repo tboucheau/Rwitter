@@ -15,7 +15,7 @@
     <div class="col-sm-4">
       <div class="card">
         <h4 class="card-header bg-primary">
-        <div class="inline">
+        <div class="inline" style="color: white;">
             <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
               <%= link_to "Add pseudo", edit_user_path(tweet.user.id) %>
             <% else %>
