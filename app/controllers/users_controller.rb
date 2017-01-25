@@ -13,8 +13,11 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update(user_params)
-        redirect_to tweets_path, notice: 'User was successfully updated.'
+        if @user.update(user_params)
+          redirect_to tweets_path, notice: 'User was successfully updated.'
+        else
+          render 'edit'
+        end
     end
 
     
