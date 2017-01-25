@@ -4,6 +4,12 @@ class UsersController < ApplicationController
     before_action :authenticate_user!
 
     def edit
+      if current_user.id === @user.id
+        render 'edit'
+      else
+        redirect_to tweets_path
+      end
+
     end
 
     def update
