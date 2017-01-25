@@ -17,6 +17,7 @@
     margin: 5px 5px 5px 5px;
 }
 .jumbotron {
-    background: url(http://lorempicsum.com/futurama/627/300/4) !important;
+    background: url(http://lorempicsum.com/futurama/1200/600/4) !important;
     background-size: cover !important;
+    opacity:0.4
 }
