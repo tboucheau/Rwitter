@@ -15,16 +15,16 @@
     <div class="col-sm-4">
       <div class="card">
         <h3 class="card-header">
-        <p align="left">
-          <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
-              <td><%= link_to "Add pseudo", edit_user_path(tweet.user.id) %></td>
-          <% else %>
-            <td>@<%= tweet.user.pseudo %></td>
-          <% end %>
+        <div class="inline">
+          <p class="bg-primary">
+            <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
+              <%= link_to "Add pseudo", edit_user_path(tweet.user.id) %>
+            <% else %>
+              @<%= tweet.user.pseudo %>
+            <% end %>
           </p>
-            <p align="right">
-              X
-          </p>
+          <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
         </h3>
         <div class="card-block">
           <h4 class="card-title">
