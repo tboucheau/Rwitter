@@ -10,11 +10,10 @@
       </ul>
     </div>
   <% end %>
+<% current_user.inspect %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
+<%= hidden_field(:user_id, :current_user) %>
+
   <div class="field">
     <%= f.label :content %>
     <%= f.text_field :content %>
