@@ -25,6 +25,7 @@ class TweetsController < ApplicationController
   # POST /tweets
   # POST /tweets.json
   def create
+    tweet_params += current_user
     @tweet = Tweet.new(tweet_params)
 
     respond_to do |format|
