@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     def update
         @user.update(user_params)
-        redirect_to tweets_path, notice: 'Tweet was successfully updated.'
+        redirect_to tweets_path, notice: 'User was successfully updated.'
     end
 
     
