@@ -21,3 +21,6 @@
     background-size: cover !important;
     opacity:0.4 !important;
 }
+.jumbotron h1, p, new_tweet {
+    opacity: 1 !important;
+}
