@@ -14,7 +14,7 @@
     <% @tweets.each do |tweet| %>
       <tr>
         <td>@<%= tweet.user.pseudo %></td>
-        <td><a href="<%= link_to "#{tweet.content}", tweet %>"><%=  %></a></td>
+        <td><a href="<%= link_to "#{tweet.content}", tweet %>"></a></td>
 	<td><%= time_ago_in_words(tweet.created_at) %>
         
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
