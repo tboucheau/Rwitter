@@ -18,7 +18,7 @@
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <% if tweet.user.pseudo.nil? %>
+        <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
             <td><%= link_to "Add pseudo", edit_user_path(tweet.user.id) %></td>
         <% else %>
           <td>@<%= tweet.user.pseudo %></td>
