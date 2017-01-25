@@ -13,8 +13,8 @@
   
     <% @tweets.each do |tweet| %>
     <div class="col-sm-4">
-      <div class="card card-inverse">
-        <h3 class="card-header bg-primary">
+      <div class="card">
+        <h4 class="card-header bg-primary">
         <div class="inline">
             <% if tweet.user.pseudo.nil? && current_user.id == tweet.user_id %>
               <%= link_to "Add pseudo", edit_user_path(tweet.user.id) %>
@@ -25,15 +25,15 @@
               <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <% end %>
         </div>
-        </h3>
+        </h4>
         <div class="card-block">
-          <h4 class="card-title">
+          <h5 class="card-title">
             <% if current_user.id == tweet.user_id %>
               <td><%= link_to "#{tweet.content}", edit_tweet_path(tweet) %></td>
             <% else %>
               <td><%= tweet.content %></td>
             <% end %>
-          </h4>
+          </h5>
           <p class="card-text">
             <%= time_ago_in_words(tweet.created_at) %>
           </p>
