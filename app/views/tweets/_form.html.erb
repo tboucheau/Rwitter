@@ -11,12 +11,9 @@
     </div>
   <% end %>
 
-<div class="field">
+<div class="form-group">
     <%= f.hidden_field :user_id, :value => current_user.id %>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :content %>
-    <%= f.submit 'tweet', :class => 'btn btn-primary' %>
+    <%= f.text_field :content, :class => 'form-control' %>
+    <%= f.submit 'Rweet', :class => 'btn btn-primary' %>
   </div>
 <% end %>
