@@ -13,6 +13,3 @@
  *= require_tree .
  *= require_self
  */
-body{
-    margin-top: 50px;
-}
