@@ -17,10 +17,9 @@
     margin: 5px 5px 5px 5px;
 }
 .jumbotron {
-    background: url(http://lorempicsum.com/futurama/1200/600/4) !important;
+    background: url(http://lorempicsum.com/futurama/1200/600/4), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)); !important;
     background-size: cover !important;
 }
 .jumbotron h1, p, new_tweet {
     color: white !important;
-    text-shadow: 1px black !important;
 }
