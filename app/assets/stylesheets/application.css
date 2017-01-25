@@ -19,5 +19,5 @@
 .jumbotron {
     background: url(http://lorempicsum.com/futurama/1200/600/4) !important;
     background-size: cover !important;
-    opacity:0.4
+    opacity:0.4 !important;
 }
