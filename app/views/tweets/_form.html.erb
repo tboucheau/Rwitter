@@ -16,11 +16,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :content %>
     <%= f.text_field :content %>
-  </div>
-
-  <div class="actions btn btn-primary">
-    <%= f.submit %>
+    <%= f.submit 'tweet', :class => 'btn btn-primary' %>
   </div>
 <% end %>
