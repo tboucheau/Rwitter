@@ -13,7 +13,11 @@
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <td>@<%= tweet.user.pseudo %></td>
+        <% if tweet.user.pseudo.empty? %>
+            <td>Ajouter un pseudo</td>
+        <% else %>
+          <td>@<%= tweet.user.pseudo %></td>
+        <% end %>
         <% if current_user.id == tweet.user_id %>
           <td><%= link_to "#{tweet.content}", edit_tweet_path(tweet) %></td>
         <% else %>
