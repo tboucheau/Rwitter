@@ -11,12 +11,17 @@
     </div>
   <% end %>
 
-<div class="field">
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-  </div>
+    <div class="field">
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
 
-  <div class="field">
-    <%= f.text_field :content %>
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <div class="field">
+        <%= f.text_field :pseudo %>
+    </div>
+    <div class="field">
+        <%= f.text_field :email %>
+    </div>
+    <div class="field">
+    <%= f.submit 'Update', :class => 'btn btn-primary' %>
   </div>
 <% end %>
