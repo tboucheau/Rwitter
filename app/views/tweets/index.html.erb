@@ -20,7 +20,9 @@
           <td><%= tweet.content %></td>
         <% end %>
         <td><%= time_ago_in_words(tweet.created_at) %>        
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.id == tweet.user_id %>
+          <td><%= link_to 'Remove tweet', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
