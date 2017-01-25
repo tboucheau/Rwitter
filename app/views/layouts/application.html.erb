@@ -21,7 +21,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+              <% if user_signed_in? %>
+                <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+              <% end %>
             </div>
           </li>
         </ul>
