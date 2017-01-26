@@ -23,6 +23,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <% if user_signed_in? %>
                 <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+                <%= link_to 'Profile', edit_user_path(current_user.id), class: 'dropdown-item' %>
               <% else %>
                 <div class="dropdown-item">Please log-in</div>
               <% end %>
