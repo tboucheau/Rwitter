@@ -13,10 +13,16 @@
 
     <div class="form-group">
       <%= f.hidden_field :id, :value => current_user.id %>
-      <%= f.label :pseudo %>
-      <%= f.text_field :pseudo, :class => 'form-control text' %>
-      <%= f.label :email %>
-      <%= f.text_field :email, :class => 'form-control email'  %>
-      <%= f.submit 'Update', :class => 'btn btn-primary' %>
+      <p>
+        <%= f.label :pseudo %>
+        <%= f.text_field :pseudo, :class => 'form-control text' %>
+      </p>
+      <p>
+        <%= f.label :email %>
+        <%= f.text_field :email, :class => 'form-control email'  %>
+      </p>
+      <p>
+        <%= f.submit 'Update', :class => 'btn btn-primary' %>
+      </p>
     </div>
 <% end %>
